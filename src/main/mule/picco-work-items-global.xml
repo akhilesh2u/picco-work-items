@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email"
+	xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+	xmlns:wsc="http://www.mulesoft.org/schema/mule/wsc"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:s3="http://www.mulesoft.org/schema/mule/s3"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:dynamodb="http://www.mulesoft.org/schema/mule/dynamodb" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd 
+http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd 
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/dynamodb http://www.mulesoft.org/schema/mule/dynamodb/current/mule-dynamodb.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/s3 http://www.mulesoft.org/schema/mule/s3/current/mule-s3.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
+http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/current/mule-wsc.xsd">
+	<global-property doc:name="Global Property" doc:id="f747021b-febe-4c55-ad6b-d52342bab0d3" name="mule.env" value="dev" />
+	<configuration-properties doc:name="Configuration properties" doc:id="f58f698b-af5e-42bc-ac40-823e1975cd34" file="${mule.env}.yaml" />
+	<email:smtp-config name="Email_SMTP" doc:name="Email SMTP" doc:id="e549b602-d7b7-4d46-ba0e-7f5f752047fe" >
+		<email:smtps-connection host="${smtp.host}" port="${smtp.port}" user="${smtp.user}" password="${smtp.password}" >
+			<tls:context >
+				<tls:trust-store insecure="true" />
+			</tls:context>
+		</email:smtps-connection>
+	</email:smtp-config>	
+    <http:listener-config name="picco-work-items-interface-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="${mule.listening.port}" />
+    </http:listener-config>
+    <apikit:config name="picco-work-items-interface-config" raml="picco-work-items-interface.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+	<wsc:config name="Web_Service_Consumer_Config" doc:name="Web Service Consumer Config" doc:id="e78348ab-9176-4a51-a7f0-49bb9be76466" >
+		<wsc:connection wsdlLocation="${workitems.wsdlLocation}" service="${workitems.service}" port="${workitems.port}" address="${workitems.address}" />
+	</wsc:config>
+    
+</mule>

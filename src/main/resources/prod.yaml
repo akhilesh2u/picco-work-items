@@ -1,0 +1,24 @@
+######################  WorkItemsCreated Application config prop ######################
+mule:
+  listening:
+    port: "8081"
+    
+
+workitems:
+  wsdlLocation: "wsdl/NOT_Server.wsdl"
+  service: "NOT_Server"
+  port: "NOT_ServerSoap"
+  address: "http://LUK-PF0T9N81:8088/mockNOT_ServerSoap"
+  listener:
+    path: "/create-work-unassignment"
+    
+smtp:
+  user: "skaelpilot@gmail.com"
+  password: "skael123"
+  host: "smtp.gmail.com"
+  port: "465"
+  mail:
+    from: "skaelpilot@gmail.com"
+    to: "skaelpilot@gmail.com"
+    subject: "Work Items Prod Env Error Notification"
+      

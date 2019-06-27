@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.multispeak.org/V5.0/wsdl/NOT_Server" xmlns:com="http://www.multispeak.org/V5.0/commonTypes"
+	xmlns:prim="http://www.multispeak.org/V5.0/primitives" xmlns:arrays="http://www.multispeak.org/V5.0/commonArrays"
+	xmlns:msp="http://www.multispeak.org/V5.0" xmlns:enum="http://www.multispeak.org/V5.0/enumerations"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="http://www.multispeak.org/V5.0/wsdl/NOT_Server"
+	version="5.0">
+	<xs:import namespace="http://www.multispeak.org/V5.0/commonArrays"
+		schemaLocation="mspArrayTypes.xsd" />
+	<xs:import namespace="http://www.multispeak.org/V5.0/enumerations"
+		schemaLocation="mspEnumerations.xsd" />
+	<xs:import namespace="http://www.multispeak.org/V5.0"
+		schemaLocation="MultiSpeak.xsd" />
+	<xs:import namespace="http://www.multispeak.org/V5.0/commonTypes"
+		schemaLocation="mspCommonTypes.xsd" />
+	<xs:import namespace="http://www.multispeak.org/V5.0/primitives"
+		schemaLocation="mspPrimitives.xsd" />
+	<xs:element name="AccountsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfAccount" type="arrays:ArrayOfAccount" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AccountsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AccountsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfAccount" type="arrays:ArrayOfAccount" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AccountsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AccountsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AccountsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AssetsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfAsset" type="arrays:ArrayOfAsset" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssetsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AssetsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfAsset" type="arrays:ArrayOfAsset" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssetsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AssetsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssetsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AttachmentsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfAttachment" type="arrays:ArrayOfAttachment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AttachmentsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="AttachmentsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AttachmentsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDDevice" type="arrays:ArrayOfCDDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDDevice" type="arrays:ArrayOfCDDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesExchangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDDeviceExchange"
+					type="arrays:ArrayOfCDDeviceExchange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesExchangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesInstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDDevice" type="arrays:ArrayOfCDDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesInstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDDevicesUninstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDDevice" type="arrays:ArrayOfCDDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDDevicesUninstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDStatesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDStateChange"
+					type="arrays:ArrayOfCDStateChange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDStatesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CDStatesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCDState" type="arrays:ArrayOfCDState" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CDStatesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ChargeableDevicesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfChargeableDevicesReferable"
+					type="arrays:ArrayOfChargeableDevicesReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChargeableDevicesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ChargeableDevicesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfChargeableDevicesReferable"
+					type="arrays:ArrayOfChargeableDevicesReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChargeableDevicesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ChargeableDevicesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChargeableDevicesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ClearancesAcknowledgedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfClearanceInstance"
+					type="arrays:ArrayOfClearanceInstance" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClearancesAcknowledgedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ClearanceTagsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfClearanceTag"
+					type="arrays:ArrayOfClearanceTag" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClearanceTagsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ClearanceTagsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfClearanceTag"
+					type="arrays:ArrayOfClearanceTag" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClearanceTagsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ClearanceTagsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClearanceTagsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ClearanceTagsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfClearanceTag"
+					type="arrays:ArrayOfClearanceTag" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClearanceTagsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ConnectDisconnectEventsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfConnectDisconnectEvent"
+					type="arrays:ArrayOfConnectDisconnectEvent" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConnectDisconnectEventsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ConnectivityChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="connectivity" type="msp:connectivity" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConnectivityChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ConnectivityCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="connectivity" type="msp:connectivity" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConnectivityCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ConnectivityDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConnectivityDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ContactInfoChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfContactInfoReferable"
+					type="arrays:ArrayOfContactInfoReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContactInfoChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ContactRequestStatusesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfContactRequestStatusReferable" type="arrays:ArrayOfContactRequestStatusReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContactRequestStatusesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ControlActionNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAControl"
+					type="arrays:ArrayOfSCADAControl" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlActionNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CPRsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCPR" type="arrays:ArrayOfCPR" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CPRsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CPRsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCPR" type="arrays:ArrayOfCPR" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CPRsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CPRsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CPRsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CustomersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCustomer" type="arrays:ArrayOfCustomer" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CustomersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CustomersCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCustomer" type="arrays:ArrayOfCustomer" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CustomersCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="CustomersDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CustomersDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DemandResetsCancelledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDemandResetCancel"
+					type="arrays:ArrayOfDemandResetCancel" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DemandResetsCancelledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DemandResetsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDemandReset"
+					type="arrays:ArrayOfDemandReset" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DemandResetsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DemandResponseEventStatusesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDemandResponseEventStatus"
+					type="arrays:ArrayOfDemandResponseEventStatus" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DemandResponseEventStatusesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DemandResponseSetupNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDemandResponseParameters"
+					type="arrays:ArrayOfDemandResponseParameters" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DemandResponseSetupNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DesignedWorkOrdersNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkOrder" type="arrays:ArrayOfWorkOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DesignedWorkOrdersNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DesignSubmissionsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDesignSubmission"
+					type="arrays:ArrayOfDesignSubmission" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DesignSubmissionsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DomainsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDomain" type="arrays:ArrayOfDomain" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DomainsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DRProgramEnrollmentsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDRProgramEnrollment"
+					type="arrays:ArrayOfDRProgramEnrollment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DRProgramEnrollmentsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DRProgramsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDRProgram" type="arrays:ArrayOfDRProgram" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DRProgramsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DRProgramsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDRProgram" type="arrays:ArrayOfDRProgram" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DRProgramsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DRProgramsRescindedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDRProgram" type="arrays:ArrayOfDRProgram" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DRProgramsRescindedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="DRProgramUnenrollmentsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfDRProgramEnrollment"
+					type="arrays:ArrayOfDRProgramEnrollment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DRProgramUnenrollmentsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EndDeviceEventResetsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfEndDeviceEventList"
+					type="arrays:ArrayOfEndDeviceEventList" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EndDeviceEventResetsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EndDeviceEventsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfEndDeviceEventList"
+					type="arrays:ArrayOfEndDeviceEventList" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EndDeviceEventsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EndDeviceStateChangesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfEndDeviceStateChange"
+					type="arrays:ArrayOfEndDeviceStateChange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EndDeviceStateChangesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EndDeviceStatesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfEndDeviceState"
+					type="arrays:ArrayOfEndDeviceState" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EndDeviceStatesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EquipmentChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="equipment" type="msp:equipment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EquipmentChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EquipmentCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="equipment" type="msp:equipment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EquipmentCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="EquipmentDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EquipmentDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="FormattedBlockNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfFormattedBlock"
+					type="arrays:ArrayOfFormattedBlock" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FormattedBlockNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="GetMethods">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="GetMethodsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfString" type="arrays:ArrayOfString" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IncidentEvaluationNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfIncidentEvaluation"
+					type="arrays:ArrayOfIncidentEvaluation" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IncidentEvaluationNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="IntervalDataNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfIntervalData"
+					type="arrays:ArrayOfIntervalData" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IntervalDataNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LaborCategoriesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLaborCategory"
+					type="arrays:ArrayOfLaborCategory" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LaborCategoriesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LaborCategoriesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLaborCategory"
+					type="arrays:ArrayOfLaborCategory" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LaborCategoriesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LaborCategoriesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LaborCategoriesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLoadManagementDevice"
+					type="arrays:ArrayOfLoadManagementDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLoadManagementDevice"
+					type="arrays:ArrayOfLoadManagementDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesExchangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLMDeviceExchange"
+					type="arrays:ArrayOfLMDeviceExchange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesExchangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesInstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLoadManagementDevice"
+					type="arrays:ArrayOfLoadManagementDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesInstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LMDevicesUninstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLoadManagementDevice"
+					type="arrays:ArrayOfLoadManagementDevice" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LMDevicesUninstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LoadCycleTiersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANDeviceRef"
+					type="arrays:ArrayOfPANDeviceRef" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LoadCycleTiersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LocationTrackingLogsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLTLog" type="arrays:ArrayOfLTLog" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LocationTrackingLogsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LocationTrackingPositionsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfLTPosition" type="arrays:ArrayOfLTPosition" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LocationTrackingPositionsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LTSupportedResourcesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfResource" type="arrays:ArrayOfResource" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LTSupportedResourcesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LTSupportedResourcesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfResource" type="arrays:ArrayOfResource" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LTSupportedResourcesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="LTSupportedResourcesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LTSupportedResourcesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ManufacturerSpecificCommandsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANDeviceRef"
+					type="arrays:ArrayOfPANDeviceRef" />
+				<xs:element minOccurs="0" name="tunnelCommandContent"
+					type="msp:tunnelCommandContent" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerSpecificCommandsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialItemsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMaterialItem"
+					type="arrays:ArrayOfMaterialItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialItemsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialItemsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMaterialItem"
+					type="arrays:ArrayOfMaterialItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialItemsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialItemsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialItemsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMaterialManagementAssembly"
+					type="arrays:ArrayOfMaterialManagementAssembly" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMaterialManagementAssembly"
+					type="arrays:ArrayOfMaterialManagementAssembly" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialManagementAssembliesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MeterConfigurationsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMeterConfigurationStatus"
+					type="arrays:ArrayOfMeterConfigurationStatus" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MeterConfigurationsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MeterReadingsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMeterReading"
+					type="arrays:ArrayOfMeterReading" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MeterReadingsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="meters" type="msp:meters" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="meters" type="msp:meters" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersExchangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="meterExchanges" type="msp:meterExchanges" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersExchangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersInstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="meters" type="msp:meters" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersInstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MetersUninstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="meters" type="msp:meters" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetersUninstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="MeterTopologyNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfMeterTopology"
+					type="arrays:ArrayOfMeterTopology" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MeterTopologyNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ObjectRefChangesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectRefChange"
+					type="arrays:ArrayOfObjectRefChange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ObjectRefChangesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutageReasonChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfOutageReasonCodeList"
+					type="arrays:ArrayOfOutageReasonCodeList" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutageReasonChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutageReasonListChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="outageReasonList" type="msp:outageReasonList" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutageReasonListChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutagesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="outages" type="msp:outages" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutagesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutagesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="outages" type="msp:outages" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutagesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutagesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutagesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutagesMergedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfOutageMerge"
+					type="arrays:ArrayOfOutageMerge" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutagesMergedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutagesSplitNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfOutageSplit"
+					type="arrays:ArrayOfOutageSplit" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutagesSplitNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutageStatusesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfOutageStatusReferable"
+					type="arrays:ArrayOfOutageStatusReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutageStatusesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="OutageWorkUpdateNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfOutageWorkUpdate"
+					type="arrays:ArrayOfOutageWorkUpdate" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutageWorkUpdateNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PANCommissioningNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANCommission"
+					type="arrays:ArrayOfPANCommission" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PANCommissioningNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PANPricingNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="priceTierStructure" type="msp:priceTierStructure" />
+				<xs:element minOccurs="0" name="PANInterfaceID" type="msp:PANInterfaceID" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PANPricingNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PANRegistrationNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANRegistration"
+					type="arrays:ArrayOfPANRegistration" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PANRegistrationNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PingURL">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PingURLResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PMAcknowledgementNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPowerMonitor"
+					type="arrays:ArrayOfPowerMonitor" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PMAcknowledgementNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PolesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPole" type="arrays:ArrayOfPole" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PolesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPole" type="arrays:ArrayOfPole" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PolesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PowerFactorManagementEventsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfCapacitorBankSwitch"
+					type="arrays:ArrayOfCapacitorBankSwitch" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PowerFactorManagementEventsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PowerMonitorsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPowerMonitor"
+					type="arrays:ArrayOfPowerMonitor" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PowerMonitorsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplayCapabilitySettingsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANDeviceRef"
+					type="arrays:ArrayOfPANDeviceRef" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplayCapabilitySettingsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplayMessagesConfirmationsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfPremisesDisplayMessageConfirmation" type="arrays:ArrayOfPremisesDisplayMessageConfirmation" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplayMessagesConfirmationsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplayMessagesStatusesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfPremisesDisplayMessageStatus" type="arrays:ArrayOfPremisesDisplayMessageStatus" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplayMessagesStatusesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPremisesDisplay"
+					type="arrays:ArrayOfPremisesDisplay" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPremisesDisplay"
+					type="arrays:ArrayOfPremisesDisplay" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysExchangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPremisesDisplayExchange"
+					type="arrays:ArrayOfPremisesDisplayExchange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysExchangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysInstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPremisesDisplay"
+					type="arrays:ArrayOfPremisesDisplay" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysInstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PremisesDisplaysUninstalledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPremisesDisplay"
+					type="arrays:ArrayOfPremisesDisplay" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PremisesDisplaysUninstalledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PricingEventsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPricingEvent"
+					type="arrays:ArrayOfPricingEvent" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PricingEventsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="PricingTiersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANInterfaceID"
+					type="arrays:ArrayOfPANInterfaceID" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PricingTiersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ReadingScheduleResultsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfReadingScheduleResult"
+					type="arrays:ArrayOfReadingScheduleResult" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadingScheduleResultsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ResourcesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfResource" type="arrays:ArrayOfResource" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResourcesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ResourcesCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfResource" type="arrays:ArrayOfResource" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResourcesCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ResourcesDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResourcesDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAAnalog"
+					type="arrays:ArrayOfSCADAAnalog" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotificationForPower">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAAnalog"
+					type="arrays:ArrayOfSCADAAnalog" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotificationForPowerResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotificationForVoltage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAAnalog"
+					type="arrays:ArrayOfSCADAAnalog" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAAnalogsChangedNotificationForVoltageResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAPointsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAPoint" type="arrays:ArrayOfSCADAPoint" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAPointsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAPointsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAPoint" type="arrays:ArrayOfSCADAPoint" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAPointsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAPointsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAPointsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SCADAStatusesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSCADAStatus"
+					type="arrays:ArrayOfSCADAStatus" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCADAStatusesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SecurityLightsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSecurityLight"
+					type="arrays:ArrayOfSecurityLight" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SecurityLightsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SecurityLightsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSecurityLight"
+					type="arrays:ArrayOfSecurityLight" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SecurityLightsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SecurityLightsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SecurityLightsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceLocationsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfServiceLocation"
+					type="arrays:ArrayOfServiceLocation" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceLocationsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceLocationsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfServiceLocation"
+					type="arrays:ArrayOfServiceLocation" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceLocationsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceLocationsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceLocationsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceOrdersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfServiceOrder"
+					type="arrays:ArrayOfServiceOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceOrdersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceOrdersCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfServiceOrder"
+					type="arrays:ArrayOfServiceOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceOrdersCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServiceOrdersDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceOrdersDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServicePointOutageDurationsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfServicePointOutageDurations" type="arrays:ArrayOfServicePointOutageDurations" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServicePointOutageDurationsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServicePointsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="servicePoints" type="msp:servicePoints" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServicePointsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServicePointsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="servicePoints" type="msp:servicePoints" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServicePointsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ServicePointsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServicePointsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SpatialFeaturesContainerNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="spatialFeaturesContainer"
+					type="msp:spatialFeaturesContainer" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpatialFeaturesContainerNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="StreetLightsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfStreetLight"
+					type="arrays:ArrayOfStreetLight" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StreetLightsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="StreetLightsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfStreetLight"
+					type="arrays:ArrayOfStreetLight" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StreetLightsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="StreetLightsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StreetLightsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SurgeArrestorsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSurgeArrestor"
+					type="arrays:ArrayOfSurgeArrestor" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SurgeArrestorsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SurgeArrestorsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSurgeArrestor"
+					type="arrays:ArrayOfSurgeArrestor" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SurgeArrestorsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SurgeArrestorsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SurgeArrestorsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SwitchingOrdersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSwitchingOrder"
+					type="arrays:ArrayOfSwitchingOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SwitchingOrdersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SwitchingOrdersCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSwitchingOrder"
+					type="arrays:ArrayOfSwitchingOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SwitchingOrdersCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SwitchingOrdersDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SwitchingOrdersDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="SystemStateNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="systemState" type="msp:systemState" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SystemStateNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TariffsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfTariff" type="arrays:ArrayOfTariff" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TariffsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TemperatureTiersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfPANDeviceRef"
+					type="arrays:ArrayOfPANDeviceRef" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TemperatureTiersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatConfigurationsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfThermostatConfigurationReferable" type="arrays:ArrayOfThermostatConfigurationReferable" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatConfigurationsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfThermostat" type="arrays:ArrayOfThermostat" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatScheduleConfirmationsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ArrayOfThermostatScheduleConfirmation" type="arrays:ArrayOfThermostatScheduleConfirmation" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatScheduleConfirmationsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatSchedulesNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfThermostatSchedule"
+					type="arrays:ArrayOfThermostatSchedule" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatSchedulesNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfThermostat" type="arrays:ArrayOfThermostat" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThermostatsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThermostatsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="ThresholdEventsNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfThresholdNotificationItem"
+					type="arrays:ArrayOfThresholdNotificationItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ThresholdEventsNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TopologyElementsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="topologyElements" type="msp:topologyElements" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TopologyElementsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TrafficLightsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfTrafficLight"
+					type="arrays:ArrayOfTrafficLight" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TrafficLightsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TransformerBanksChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfTransformerBank"
+					type="arrays:ArrayOfTransformerBank" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransformerBanksChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TransformerBanksCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfTransformerBank"
+					type="arrays:ArrayOfTransformerBank" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransformerBanksCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="TransformerBanksDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransformerBanksDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="UsagesChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfUsage" type="arrays:ArrayOfUsage" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UsagesChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="VoiceRecordingsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfVoiceRecording"
+					type="arrays:ArrayOfVoiceRecording" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VoiceRecordingsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="VoiceRecordingsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfVoiceRecording"
+					type="arrays:ArrayOfVoiceRecording" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VoiceRecordingsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="VoiceRecordingsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VoiceRecordingsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkAssignmentsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkAssignmentChange"
+					type="arrays:ArrayOfWorkAssignmentChange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkAssignmentsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkItemsChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkItem" type="arrays:ArrayOfWorkItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkItemsChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkItemsCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkItem" type="arrays:ArrayOfWorkItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkItemsCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkItemsDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkItemsDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkItemsUnscheduledNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkItemRef"
+					type="arrays:ArrayOfWorkItemRef" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkItemsUnscheduledNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkOrdersChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkOrder" type="arrays:ArrayOfWorkOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkOrdersChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkOrdersCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkOrder" type="arrays:ArrayOfWorkOrder" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkOrdersCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkOrdersDeletedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfObjectDeletion"
+					type="arrays:ArrayOfObjectDeletion" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkOrdersDeletedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkProgressNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkProgressItem"
+					type="arrays:ArrayOfWorkProgressItem" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkProgressNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkRequestResultNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkRequestResult"
+					type="arrays:ArrayOfWorkRequestResult" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkRequestResultNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkScheduleChangedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkScheduleChange"
+					type="arrays:ArrayOfWorkScheduleChange" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkScheduleChangedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkScheduleCreatedNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfSchedulingResult"
+					type="arrays:ArrayOfSchedulingResult" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkScheduleCreatedNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="WorkUnassignmentNotification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ArrayOfWorkUnassignment"
+					type="arrays:ArrayOfWorkUnassignment" />
+				<xs:element minOccurs="0" name="transactionID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WorkUnassignmentNotificationResponse">
+		<xs:complexType />
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/3dcaa123-0337-418e-9351-f6e66ea97e13/ # 
+title: Picco Work Items
+version: v1
+description: API to consume the operations exposed by Work Items Web Service
+
+/v1:
+  /create-work-unassignment:
+    displayName: create work unassignments notifications
+    post:
+      description: Post the data to create an work unassignment notification
+      body:
+        application/json:
+      responses:
+        200:
+          body:
+            application/json:

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd http://www.mulesoft.org/schema/mule/munit-tools http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd 
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+    <munit:config name="picco-work-items-interface-apikit-test.xml" />
+    <http:request-config name="HTTP_Request_Configuration" basePath="/api">
+        <http:request-connection host="localhost" port="8081" />
+    </http:request-config>
+    <munit:test name="post:\v1\create-work-unassignment:picco-work-items-interface-config-200-application\json-FlowTest" description="Verifying functionality of [post:\v1\create-work-unassignment:picco-work-items-interface-config-200-application\json]">
+        <munit:enable-flow-sources>
+            <munit:enable-flow-source value="picco-work-items-interface-main" />
+            <munit:enable-flow-source value="post:\v1\create-work-unassignment:application\json:picco-work-items-interface-config" />
+        </munit:enable-flow-sources>
+        <munit:behavior>
+			<ee:transform doc:name="Set Payload" doc:id="54e4df16-e327-48d1-a17b-ed68ca8f86d1" >
+				<ee:message >
+				</ee:message>
+				<ee:variables >
+					<ee:set-variable variableName="setPayload" ><![CDATA[%dw 2.0
+output application/java
+---
+{"body":{"WorkUnassignmentNotificationResponse":"success"},"attachments":{},"headers":{}}]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+			<munit-tools:mock-when doc:name="Mock when" doc:id="808d4e53-2909-4832-a6d8-42c70d6f7d5f" processor="wsc:consume">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute attributeName="doc:name" whereValue="Consume Work Items WebService" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value='#[vars.setPayload]' mediaType="application/java" />
+					<munit-tools:variables >
+						<munit-tools:variable key="workItemsRs" value="#[vars.setPayload]" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+        </munit:behavior>
+        <munit:execution>
+			<munit:set-event doc:name="Set Event" doc:id="a29e6ac5-a9ac-4c6a-a3e1-f7f670cdf2c3" >
+				<munit:payload value='{"IsSuccess":true}' mediaType="application/json" />
+			</munit:set-event>
+			<http:request config-ref="HTTP_Request_Configuration" method="POST" path="/v1/create-work-unassignment">
+                <http:headers>#[{"Accept":"application/json","Content-Type":"application/json"}]</http:headers>
+            </http:request>
+        </munit:execution>
+        <munit:validation>
+			<set-variable value="#[MunitTools::getResourceAsString('scaffolder/response/post_200_v1_create-work-unassignment_application_json.json' default &quot;&quot;)]" doc:name="Set Expected Response" doc:id="449edc3c-626a-4f2d-a202-e241eae67a8b" variableName="setExpectedRs" mimeType="text/json"/>
+			<munit-tools:assert-that expression="#[attributes.statusCode]" is="#[MunitTools::equalTo(200)]" message="The HTTP Status code is not correct!" doc:name="Assert That Status Code is 200" />
+            <munit-tools:assert-that expression='#[payload]' is="#[MunitTools::equalTo( vars.setExpectedRs)]" message="The response payload is not correct!" doc:name="Assert That - Payload is Expected" doc:id="2781dad0-cadd-4576-9284-6ab7ef73ddfe"/>
+        </munit:validation>
+    </munit:test>
+</mule>
