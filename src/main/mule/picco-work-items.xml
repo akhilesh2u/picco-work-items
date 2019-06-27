@@ -74,21 +74,33 @@ vars.workItemsRs.body]]></ee:set-payload>
 				<logger level="INFO" doc:name="Logger" doc:id="5bc40e15-6e5d-46b0-89dc-dde0aea8ec11" message="#['\n\nError occured while executing the process for work unassignment notification\n']"/>
 				<ee:transform doc:name="Transform Error Message" doc:id="ad7721c1-87e0-4387-b393-8a1d639e1b51" >
 					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
+					</ee:message>
+					<ee:variables >
+						<ee:set-variable variableName="errorRs" ><![CDATA[%dw 2.0
 output application/json
 ---
 {
 	detailedError:  write(error.exception.cause, "application/java")
-}]]></ee:set-payload>
-					</ee:message>
+}]]></ee:set-variable>
+					</ee:variables>
 				</ee:transform>
+				<logger level="INFO" doc:name="Logger" doc:id="1c5785c9-2999-492c-b0a0-a8acf9b999e4" message="#['\n\nError Response when process the work items:\n ']#[vars.errorRs]#[' \n']" />
 				<email:send doc:name="Send Notification Email" doc:id="7c71715f-865f-4d00-86b9-5d79b7b65b9a" config-ref="Email_SMTP" fromAddress="${smtp.mail.from}" subject="${smtp.mail.subject}">
 					<email:to-addresses >
 						<email:to-address value="${smtp.mail.to}" />
 					</email:to-addresses>
-					<email:body contentType="text/plain" />
+					<email:body contentType="text/plain" >
+						<email:content ><![CDATA[#[vars.errorRs]]]></email:content>
+					</email:body>
 				</email:send>
-				<logger level="INFO" doc:name="Logger" doc:id="1c5785c9-2999-492c-b0a0-a8acf9b999e4" message="#['\n\nEmail notification sent with error details\n']"/>
+				<ee:transform doc:name="Transform Response" doc:id="c637b18b-233f-4777-a326-4eb0ac428b6a" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+vars.errorRs]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
 			
 </on-error-continue>
 		</error-handler>
